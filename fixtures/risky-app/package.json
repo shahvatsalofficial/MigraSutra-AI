@@ -1,0 +1,5 @@
+{
+  "name": "migrasutra-risky-app",
+  "version": "1.0.0",
+  "dependencies": {"example-lib": "latest", "other-lib": "1.0.0"}
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "migrasutra.policy/v1",
+  "readOnly": true,
+  "offline": true,
+  "allowShell": false,
+  "allowNetwork": false,
+  "allowGlobalToolInstall": false,
+  "allowProductionChanges": false,
+  "allowDestructiveSQL": false,
+  "allowSourceWrites": false,
+  "allowIsolatedStaticRehearsal": true,
+  "sourceFileMaxBytes": 1048576,
+  "humanApprovalAlwaysRequiredForRelease": true
+}

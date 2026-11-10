@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use MigraSutra AI, please cite it as below."
+title: "MigraSutra AI"
+version: 0.2.0
+date-released: 2026-11-11
+license: Apache-2.0
+repository-code: "https://github.com/shahvatsalofficial/MigraSutra-AI"
+authors:
+  - family-names: Shah
+    given-names: Vatsal
+keywords: [migration, audit, release-gate, agent-skills, offline]
+abstract: "Offline, deterministic, read-only migration audit CLI with 20 portable AI-agent skills."

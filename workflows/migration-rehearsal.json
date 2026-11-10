@@ -1,0 +1,33 @@
+{
+  "schema": "migrasutra.workflow/v1",
+  "name": "migration-rehearsal",
+  "steps": [
+    {
+      "step": 1,
+      "action": "verify baseline file hashes",
+      "approvalRequired": false
+    },
+    {
+      "step": 2,
+      "action": "create disposable temporary workspace",
+      "approvalRequired": false
+    },
+    {
+      "step": 3,
+      "action": "apply declared transform to temp manifest only",
+      "approvalRequired": false
+    },
+    {
+      "step": 4,
+      "action": "verify transformed field and hashes",
+      "approvalRequired": false
+    },
+    {
+      "step": 5,
+      "action": "record tests NOT_RUN and rollback unverified",
+      "approvalRequired": false
+    }
+  ],
+  "defaultPermissions": "read-only",
+  "execution": "mixed-local"
+}

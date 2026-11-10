@@ -1,0 +1,46 @@
+{
+  "schema": "migrasutra.scan/v1",
+  "createdAt": "2026-11-10T20:11:25.645Z",
+  "mode": "offline-static-read-only",
+  "scope": {
+    "root": ".",
+    "filesRead": 2,
+    "filesConsidered": 2
+  },
+  "sourceFiles": [
+    {
+      "path": "package-lock.json",
+      "sha256": "7b6b5037fa4392ef1a3f7e405094f8aa036d5ebba838b44a67b83ffa02397c8b",
+      "bytes": 84
+    },
+    {
+      "path": "package.json",
+      "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5",
+      "bytes": 155
+    }
+  ],
+  "inventory": [
+    {
+      "ecosystem": "npm",
+      "file": "package.json",
+      "counts": {
+        "dependencies": 1,
+        "devDependencies": 0,
+        "optionalDependencies": 0,
+        "peerDependencies": 0
+      }
+    }
+  ],
+  "findings": [],
+  "totals": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "limitations": [
+    "No dependency versions were resolved online",
+    "No test commands, scripts, codemods, or database migrations were executed",
+    "Static SQL patterns are heuristics, not dialect-complete parsing",
+    "Static analysis cannot prove runtime compatibility or rollback safety"
+  ]
+}

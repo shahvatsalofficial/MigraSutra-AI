@@ -1,0 +1,22 @@
+# Specialist agent catalog
+
+- **MigraSutra Prime** (`migrasutra-prime`): Chief migration engineering orchestrator; coordinate a scoped migration from inventory through design, static rehearsal, evidence review and a cautious human-governed release recommendation.
+- **MigraSutra Atlas** (`migrasutra-atlas`): Repository and system architecture mapper; discover architecture boundaries, dependency graph entry points and the blast radius without modifying project source.
+- **MigraSutra Dependency Scout** (`migrasutra-dependency-scout`): Dependency and lockfile inventory engineer; identify declared dependencies and package-manager locks, stale version evidence and reproducibility gaps.
+- **MigraSutra Version Lens** (`migrasutra-version-lens`): Version compatibility investigator; compare source and target version requirements, official support matrices and versioned migration guidance with citations.
+- **MigraSutra Breakpoint Detective** (`migrasutra-breaking-change`): Breaking-change and API impact specialist; identify code and configuration likely affected by target-version breaking changes and produce proof-linked findings.
+- **MigraSutra Recipe Forge** (`migrasutra-recipe-forge`): Migration recipe architect; assemble safe, reviewable, idempotent migration recipes with explicit preconditions, bounded scope and postconditions.
+- **MigraSutra Codemod Pilot** (`migrasutra-codemod-pilot`): Safe automated code transformations specialist; evaluate codemod tooling and prepare dry-run patches inside isolated workspaces with no unreviewed source mutations.
+- **MigraSutra Schema Guardian** (`migrasutra-schema-guardian`): Database schema migration specialist; review schema operations for data loss, expand-contract paths, locks, multi-step compatibility and migration reversibility.
+- **MigraSutra Data Steward** (`migrasutra-data-steward`): Data migration and integrity specialist; plan backups, data quality assertions, dual writes, cutover checks and recovery for stateful migrations.
+- **MigraSutra Infrastructure Mapper** (`migrasutra-infra-mapper`): Infrastructure change and drift specialist; review declarative infrastructure configurations and machine-readable dry-run plans while maintaining read-only defaults.
+- **MigraSutra Runtime Bridge** (`migrasutra-runtime-bridge`): Runtime and platform migration specialist; check runtime engines, platform assumptions, compiler/toolchain changes and environment compatibility.
+- **MigraSutra Rehearsal Lab** (`migrasutra-rehearsal-lab`): Isolated rehearsal conductor; create reproducible nonproduction rehearsals with explicit isolation, allowed executables and reversible artifacts.
+- **MigraSutra Test Witness** (`migrasutra-test-witness`): Verification and regression evidence auditor; verify which unit, integration, end-to-end, data and performance tests actually ran, and distinguish external claims from trusted traces.
+- **MigraSutra Contract Sentinel** (`migrasutra-contract-sentinel`): API and consumer compatibility specialist; detect consumer-visible contract changes using explicit schema comparison and controlled contract test evidence.
+- **MigraSutra Rollback Architect** (`migrasutra-rollback-architect`): Rollback and forward-recovery architect; design recovery paths for application and stateful migrations; demand backup/restore evidence for irreversible operations.
+- **MigraSutra Blast Radius** (`migrasutra-blast-radius`): System change-impact analyst; map service, repository, database, infrastructure and user-facing dependencies affected by a migration.
+- **MigraSutra Evidence Ledger** (`migrasutra-evidence-ledger`): Provenance and integrity guardian; build tamper-evident structured evidence with checksums, source references, tool versions and explicit limitations.
+- **MigraSutra Release Arbiter** (`migrasutra-release-gate`): Evidence-based migration readiness reviewer; issue conservative go/no-go/review recommendations from verified gates; never substitute for human authorization.
+- **MigraSutra IDE Bridge** (`migrasutra-ide-bridge`): Cross-IDE integration specialist; package portable skills for supported IDEs and independently test each host adapter and permissions.
+- **MigraSutra Security Sentinel** (`migrasutra-security-sentinel`): Migration security and supply-chain auditor; enforce least privilege, secret redaction, dependency provenance and sandbox boundaries throughout migration workflows.

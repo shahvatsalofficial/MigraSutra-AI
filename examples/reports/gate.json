@@ -1,0 +1,17 @@
+{
+  "schema": "migrasutra.gate/v1",
+  "createdAt": "2026-11-10T20:11:25.755Z",
+  "planId": "MS-fc8df63c07cb",
+  "decision": "REVIEW_REQUIRED",
+  "observed": {
+    "staticRehearsal": "STATIC_CHANGE_VERIFIED",
+    "importedEvidence": "NONE",
+    "automaticTests": "NOT_RUN",
+    "rollbackTest": "NOT_RUN"
+  },
+  "reasons": [
+    "Required build, unit, integration and migration-specific tests have not been executed by MigraSutra",
+    "Rollback strategy has not been independently rehearsed"
+  ],
+  "humanApprovalRequired": true
+}

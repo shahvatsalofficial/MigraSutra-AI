@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MigraSutra gate V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "planId",
+    "decision"
+  ],
+  "properties": {
+    "schema": {
+      "const": "migrasutra.gate/v1"
+    },
+    "planId": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "REVIEW_REQUIRED",
+        "NO_GO"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

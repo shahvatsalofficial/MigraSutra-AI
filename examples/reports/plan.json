@@ -1,0 +1,54 @@
+{
+  "schema": "migrasutra.plan/v1",
+  "planId": "MS-fc8df63c07cb",
+  "createdAt": "2026-11-10T20:11:25.688Z",
+  "mode": "proposal-only",
+  "target": {
+    "kind": "npm",
+    "name": "small-library",
+    "version": "2.0.0"
+  },
+  "baseline": {
+    "path": "package.json",
+    "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5"
+  },
+  "actions": [
+    {
+      "kind": "package-json-field-update",
+      "file": "package.json",
+      "section": "dependencies",
+      "key": "small-library",
+      "from": "1.2.3",
+      "to": "2.0.0"
+    }
+  ],
+  "sourceScan": {
+    "schema": "migrasutra.scan/v1",
+    "sourceFiles": 2,
+    "highFindings": []
+  },
+  "risk": {
+    "staticHighFindings": 0,
+    "prerequisites": [
+      "Check vendor-supported upgrade path and version release notes",
+      "Confirm supported runtime and dependency graph",
+      "Preserve verified source-control commit and backups",
+      "Run applicable tests in a reviewed isolated environment",
+      "Approve rollback and forward-fix playbook"
+    ]
+  },
+  "verification": [
+    "Install dependencies inside an isolated approved sandbox; not run by starter",
+    "Run unit, integration, contract, performance and migration-specific tests; not run by starter",
+    "Check compatibility and deployment/rollback with human reviewers"
+  ],
+  "rollback": {
+    "automatic": false,
+    "strategy": "Restore original manifest from version control or verified backup, then restore the lockfile and reinstall in an isolated environment; database rollback needs its own tested recovery procedure"
+  },
+  "decision": "REVIEW_REQUIRED",
+  "notes": [
+    "Version specified by user; no online release compatibility checked",
+    "Plan generation does not modify repository or execute tools"
+  ]
+}

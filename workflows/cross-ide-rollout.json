@@ -1,0 +1,33 @@
+{
+  "schema": "migrasutra.workflow/v1",
+  "name": "cross-ide-rollout",
+  "steps": [
+    {
+      "step": 1,
+      "action": "inspect supported host/version",
+      "approvalRequired": false
+    },
+    {
+      "step": 2,
+      "action": "copy standard skills to project-local location",
+      "approvalRequired": false
+    },
+    {
+      "step": 3,
+      "action": "confirm host discovery manually",
+      "approvalRequired": true
+    },
+    {
+      "step": 4,
+      "action": "test tool permissions in isolated fixture",
+      "approvalRequired": true
+    },
+    {
+      "step": 5,
+      "action": "publish actual compatibility evidence",
+      "approvalRequired": true
+    }
+  ],
+  "defaultPermissions": "read-only",
+  "execution": "planned"
+}

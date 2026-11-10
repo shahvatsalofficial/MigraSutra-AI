@@ -1,0 +1,167 @@
+{
+  "schema": "migrasutra.agents/v1",
+  "owner": "Vatsal Shah",
+  "prime": "migrasutra-prime",
+  "agents": [
+    {
+      "id": "migrasutra-prime",
+      "name": "MigraSutra Prime",
+      "role": "Chief migration engineering orchestrator",
+      "inputs": "source scope; user-approved target; risk tolerance; scanned artifacts",
+      "outputs": "versioned plan; delegated evidence records; unresolved questions; release handoff",
+      "skill": "skills/migrasutra-prime/SKILL.md"
+    },
+    {
+      "id": "migrasutra-atlas",
+      "name": "MigraSutra Atlas",
+      "role": "Repository and system architecture mapper",
+      "inputs": "repository metadata; project manifest; source maps",
+      "outputs": "inventory, supported systems matrix, unverified dependencies",
+      "skill": "skills/migrasutra-atlas/SKILL.md"
+    },
+    {
+      "id": "migrasutra-dependency-scout",
+      "name": "MigraSutra Dependency Scout",
+      "role": "Dependency and lockfile inventory engineer",
+      "inputs": "package manifest; lockfile; resolver records",
+      "outputs": "dependency inventory, manifest hash, update candidate evidence",
+      "skill": "skills/migrasutra-dependency-scout/SKILL.md"
+    },
+    {
+      "id": "migrasutra-version-lens",
+      "name": "MigraSutra Version Lens",
+      "role": "Version compatibility investigator",
+      "inputs": "current/target version and vendor documentation",
+      "outputs": "compatibility requirements, confidence tags, known unknowns",
+      "skill": "skills/migrasutra-version-lens/SKILL.md"
+    },
+    {
+      "id": "migrasutra-breaking-change",
+      "name": "MigraSutra Breakpoint Detective",
+      "role": "Breaking-change and API impact specialist",
+      "inputs": "version release notes; code symbol references",
+      "outputs": "breaking-change map with affected files and assumptions",
+      "skill": "skills/migrasutra-breaking-change/SKILL.md"
+    },
+    {
+      "id": "migrasutra-recipe-forge",
+      "name": "MigraSutra Recipe Forge",
+      "role": "Migration recipe architect",
+      "inputs": "approved plan; documented transforms",
+      "outputs": "recipe manifests, validated preconditions, implementation instructions",
+      "skill": "skills/migrasutra-recipe-forge/SKILL.md"
+    },
+    {
+      "id": "migrasutra-codemod-pilot",
+      "name": "MigraSutra Codemod Pilot",
+      "role": "Safe automated code transformations specialist",
+      "inputs": "approved recipe; temporary workspace and tool version",
+      "outputs": "proposed patch, transformation trace, reversibility notes",
+      "skill": "skills/migrasutra-codemod-pilot/SKILL.md"
+    },
+    {
+      "id": "migrasutra-schema-guardian",
+      "name": "MigraSutra Schema Guardian",
+      "role": "Database schema migration specialist",
+      "inputs": "DDL scripts; schema baseline; rollout requirements",
+      "outputs": "schema risk report, reversible/nonreversible operations list",
+      "skill": "skills/migrasutra-schema-guardian/SKILL.md"
+    },
+    {
+      "id": "migrasutra-data-steward",
+      "name": "MigraSutra Data Steward",
+      "role": "Data migration and integrity specialist",
+      "inputs": "schema and data contracts; backup validation evidence",
+      "outputs": "data verification plan, backup restore test requirements",
+      "skill": "skills/migrasutra-data-steward/SKILL.md"
+    },
+    {
+      "id": "migrasutra-infra-mapper",
+      "name": "MigraSutra Infrastructure Mapper",
+      "role": "Infrastructure change and drift specialist",
+      "inputs": "IaC files; provider versions; approved plan JSON",
+      "outputs": "resource change impact, permission needs, drift review",
+      "skill": "skills/migrasutra-infra-mapper/SKILL.md"
+    },
+    {
+      "id": "migrasutra-runtime-bridge",
+      "name": "MigraSutra Runtime Bridge",
+      "role": "Runtime and platform migration specialist",
+      "inputs": "source build config; platform target",
+      "outputs": "compatibility checklist, command matrix and environment risks",
+      "skill": "skills/migrasutra-runtime-bridge/SKILL.md"
+    },
+    {
+      "id": "migrasutra-rehearsal-lab",
+      "name": "MigraSutra Rehearsal Lab",
+      "role": "Isolated rehearsal conductor",
+      "inputs": "reviewed migration plan; isolated test root",
+      "outputs": "rehearsal provenance, diff, actual-versus-not-run statuses",
+      "skill": "skills/migrasutra-rehearsal-lab/SKILL.md"
+    },
+    {
+      "id": "migrasutra-test-witness",
+      "name": "MigraSutra Test Witness",
+      "role": "Verification and regression evidence auditor",
+      "inputs": "test result artifacts; runner metadata; revision hashes",
+      "outputs": "test evidence ledger and uncovered regression areas",
+      "skill": "skills/migrasutra-test-witness/SKILL.md"
+    },
+    {
+      "id": "migrasutra-contract-sentinel",
+      "name": "MigraSutra Contract Sentinel",
+      "role": "API and consumer compatibility specialist",
+      "inputs": "OpenAPI/AsyncAPI/Protobuf definitions; consumer contracts",
+      "outputs": "contract diff, compatibility risk and pending tests",
+      "skill": "skills/migrasutra-contract-sentinel/SKILL.md"
+    },
+    {
+      "id": "migrasutra-rollback-architect",
+      "name": "MigraSutra Rollback Architect",
+      "role": "Rollback and forward-recovery architect",
+      "inputs": "verified backups; deployment strategy; data retention policy",
+      "outputs": "rollback runbook, restoration test status, unmitigated risks",
+      "skill": "skills/migrasutra-rollback-architect/SKILL.md"
+    },
+    {
+      "id": "migrasutra-blast-radius",
+      "name": "MigraSutra Blast Radius",
+      "role": "System change-impact analyst",
+      "inputs": "version dependency graph; service contracts; source references",
+      "outputs": "affected-component graph, prioritized risk matrix",
+      "skill": "skills/migrasutra-blast-radius/SKILL.md"
+    },
+    {
+      "id": "migrasutra-evidence-ledger",
+      "name": "MigraSutra Evidence Ledger",
+      "role": "Provenance and integrity guardian",
+      "inputs": "scan hashes; rehearsal results; runner logs",
+      "outputs": "evidence manifest, quality status, reproducibility capsule",
+      "skill": "skills/migrasutra-evidence-ledger/SKILL.md"
+    },
+    {
+      "id": "migrasutra-release-gate",
+      "name": "MigraSutra Release Arbiter",
+      "role": "Evidence-based migration readiness reviewer",
+      "inputs": "approved plan, verified execution evidence, rollback rehearsal",
+      "outputs": "risk decision with unmet gates and human approvers required",
+      "skill": "skills/migrasutra-release-gate/SKILL.md"
+    },
+    {
+      "id": "migrasutra-ide-bridge",
+      "name": "MigraSutra IDE Bridge",
+      "role": "Cross-IDE integration specialist",
+      "inputs": "Agent Skills package; host version; approved project root",
+      "outputs": "installed local skill paths and host compatibility matrix",
+      "skill": "skills/migrasutra-ide-bridge/SKILL.md"
+    },
+    {
+      "id": "migrasutra-security-sentinel",
+      "name": "MigraSutra Security Sentinel",
+      "role": "Migration security and supply-chain auditor",
+      "inputs": "tool manifests, policy, approval records",
+      "outputs": "security findings, approval blockers, scope and residual risk",
+      "skill": "skills/migrasutra-security-sentinel/SKILL.md"
+    }
+  ]
+}

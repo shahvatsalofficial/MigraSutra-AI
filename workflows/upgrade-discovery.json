@@ -1,0 +1,33 @@
+{
+  "schema": "migrasutra.workflow/v1",
+  "name": "upgrade-discovery",
+  "steps": [
+    {
+      "step": 1,
+      "action": "confirm explicit repository root",
+      "approvalRequired": false
+    },
+    {
+      "step": 2,
+      "action": "scan bounded manifests",
+      "approvalRequired": false
+    },
+    {
+      "step": 3,
+      "action": "review rule findings",
+      "approvalRequired": false
+    },
+    {
+      "step": 4,
+      "action": "identify target and vendor guidance",
+      "approvalRequired": false
+    },
+    {
+      "step": 5,
+      "action": "record unknowns and approval owner",
+      "approvalRequired": false
+    }
+  ],
+  "defaultPermissions": "read-only",
+  "execution": "mixed-local"
+}

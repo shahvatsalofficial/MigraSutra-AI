@@ -1,0 +1,415 @@
+{
+  "schema": "migrasutra.test-evidence/v1",
+  "command": "node --test tests/*.test.mjs",
+  "exitCode": 0,
+  "total": 99,
+  "pass": 96,
+  "fail": 0,
+  "skipped": 3,
+  "durationMs": 36800,
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64",
+    "commit": "uncommitted"
+  },
+  "skippedReason": "Symlink tests skip when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.",
+  "cases": [
+    {
+      "name": "help includes safe commands",
+      "status": "pass"
+    },
+    {
+      "name": "parseArgs parses flags",
+      "status": "pass"
+    },
+    {
+      "name": "parseArgs rejects missing flag value",
+      "status": "pass"
+    },
+    {
+      "name": "doctor command works offline",
+      "status": "pass"
+    },
+    {
+      "name": "scan CLI writes JSON",
+      "status": "pass"
+    },
+    {
+      "name": "scan CLI writes markdown",
+      "status": "pass"
+    },
+    {
+      "name": "CLI plan and rehearse",
+      "status": "pass"
+    },
+    {
+      "name": "CLI refuses unsupported command",
+      "status": "pass"
+    },
+    {
+      "name": "CLI refuses missing output",
+      "status": "pass"
+    },
+    {
+      "name": "installer copies skills without overwriting",
+      "status": "pass"
+    },
+    {
+      "name": "installer supports five host layouts",
+      "status": "pass"
+    },
+    {
+      "name": "installer rejects unknown IDE",
+      "status": "pass"
+    },
+    {
+      "name": "installer refuses symlinked directory",
+      "status": "skipped"
+    },
+    {
+      "name": "server token check uses bounded compare",
+      "status": "pass"
+    },
+    {
+      "name": "server rejects weak token",
+      "status": "pass"
+    },
+    {
+      "name": "server enforces bearer auth and read-only routes",
+      "status": "pass"
+    },
+    {
+      "name": "server is localhost auth-only",
+      "status": "pass"
+    },
+    {
+      "name": "version command prints semver",
+      "status": "pass"
+    },
+    {
+      "name": "audit CLI writes json, md and html",
+      "status": "pass"
+    },
+    {
+      "name": "audit --fail high exits 1 on high findings",
+      "status": "pass"
+    },
+    {
+      "name": "audit requires --out",
+      "status": "pass"
+    },
+    {
+      "name": "scan identifies correct schema",
+      "status": "pass"
+    },
+    {
+      "name": "clean fixture produces no warnings",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture produces high findings",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds DROP TABLE",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds DROP COLUMN",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds TRUNCATE",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds unscoped DELETE",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds unpinned Python requirement",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds unpinned Docker base",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds npm nonreproducible dep",
+      "status": "pass"
+    },
+    {
+      "name": "risky fixture finds missing lockfile",
+      "status": "pass"
+    },
+    {
+      "name": "malformed manifest flagged without exception",
+      "status": "pass"
+    },
+    {
+      "name": "scan contains no fake executed tests",
+      "status": "pass"
+    },
+    {
+      "name": "scan evidence contains digest",
+      "status": "pass"
+    },
+    {
+      "name": "evidence ID deterministic",
+      "status": "pass"
+    },
+    {
+      "name": "hash changes when content changes",
+      "status": "pass"
+    },
+    {
+      "name": "target parser supports npm",
+      "status": "pass"
+    },
+    {
+      "name": "target parser supports Node engine",
+      "status": "pass"
+    },
+    {
+      "name": "target parser refuses unsupported ecosystem",
+      "status": "pass"
+    },
+    {
+      "name": "target parser refuses command injection",
+      "status": "pass"
+    },
+    {
+      "name": "npm name validation rejects whitespace",
+      "status": "pass"
+    },
+    {
+      "name": "version validator rejects scripts",
+      "status": "pass"
+    },
+    {
+      "name": "plan requires a declared package",
+      "status": "pass"
+    },
+    {
+      "name": "plan includes baseline digest",
+      "status": "pass"
+    },
+    {
+      "name": "plan action keeps old and new versions",
+      "status": "pass"
+    },
+    {
+      "name": "plan supports Node engine modification",
+      "status": "pass"
+    },
+    {
+      "name": "plan does not modify source",
+      "status": "pass"
+    },
+    {
+      "name": "stale scan refused",
+      "status": "pass"
+    },
+    {
+      "name": "static rehearsal creates transform without modifying source",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal hashes differ for intended patch",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal records no execution",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal of Node engine change works",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal with stale baseline fails",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal malicious action refused",
+      "status": "pass"
+    },
+    {
+      "name": "gate refuses unilateral GO",
+      "status": "pass"
+    },
+    {
+      "name": "gate imported evidence stays unverified",
+      "status": "pass"
+    },
+    {
+      "name": "gate high static risk blocks release",
+      "status": "pass"
+    },
+    {
+      "name": "gate detects incompatible plan IDs",
+      "status": "pass"
+    },
+    {
+      "name": "comparison detects stable findings",
+      "status": "pass"
+    },
+    {
+      "name": "comparison detects resolution",
+      "status": "pass"
+    },
+    {
+      "name": "markdown contains explicit static-only disclaimer",
+      "status": "pass"
+    },
+    {
+      "name": "HTML escapes untrusted report strings",
+      "status": "pass"
+    },
+    {
+      "name": "safeRead rejects parent directory",
+      "status": "pass"
+    },
+    {
+      "name": "safeRead rejects symlink",
+      "status": "skipped"
+    },
+    {
+      "name": "within recognizes boundaries",
+      "status": "pass"
+    },
+    {
+      "name": "SQL comments not treated as active drop",
+      "status": "pass"
+    },
+    {
+      "name": "only selected repository files inspected",
+      "status": "pass"
+    },
+    {
+      "name": "scanner refuses symlinked SQL migration ancestors",
+      "status": "skipped"
+    },
+    {
+      "name": "plan refuses credential-bearing dependency version",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal refuses tampered action version",
+      "status": "pass"
+    },
+    {
+      "name": "rehearsal output does not disclose full package manifest",
+      "status": "pass"
+    },
+    {
+      "name": "compareVersions orders numerically not lexically",
+      "status": "pass"
+    },
+    {
+      "name": "compareVersions rejects injection",
+      "status": "pass"
+    },
+    {
+      "name": "audit of risky app is NO_GO with zero tests executed",
+      "status": "pass"
+    },
+    {
+      "name": "audit of clean app never returns a GO verdict",
+      "status": "pass"
+    },
+    {
+      "name": "audit without target records scan-only note",
+      "status": "pass"
+    },
+    {
+      "name": "audit with bad target reports note instead of throwing",
+      "status": "pass"
+    },
+    {
+      "name": "audit markdown and html render verdict and escape",
+      "status": "pass"
+    },
+    {
+      "name": "NOT NULL without default is flagged, with default is not",
+      "status": "pass"
+    },
+    {
+      "name": "RENAME and non-concurrent index flagged",
+      "status": "pass"
+    },
+    {
+      "name": "go.mod and composer.json inventoried",
+      "status": "pass"
+    },
+    {
+      "name": "scan never mutates source tree (audit run)",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: drop in line comment",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: drop in block comment",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: drop inside string literal",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: drop table if exists",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: delete with where",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: delete without where",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: not null with default",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: nullable add column",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: not null without default",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: truncate",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: lowercase drop column",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: multiline drop column",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: rename column",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: index without concurrently",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: index concurrently",
+      "status": "pass"
+    },
+    {
+      "name": "sql corpus: dollar-quoted dynamic drop (known limitation)",
+      "status": "pass"
+    }
+  ]
+}

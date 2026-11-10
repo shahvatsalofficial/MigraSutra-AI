@@ -1,0 +1,33 @@
+{
+  "schema": "migrasutra.workflow/v1",
+  "name": "release-readiness",
+  "steps": [
+    {
+      "step": 1,
+      "action": "validate plan/rehearsal identities",
+      "approvalRequired": false
+    },
+    {
+      "step": 2,
+      "action": "review high-risk findings",
+      "approvalRequired": false
+    },
+    {
+      "step": 3,
+      "action": "check actual trusted test-run evidence",
+      "approvalRequired": true
+    },
+    {
+      "step": 4,
+      "action": "check rollback restore test status",
+      "approvalRequired": true
+    },
+    {
+      "step": 5,
+      "action": "request human release authorization",
+      "approvalRequired": true
+    }
+  ],
+  "defaultPermissions": "read-only",
+  "execution": "mixed-local"
+}

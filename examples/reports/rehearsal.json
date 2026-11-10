@@ -1,0 +1,34 @@
+{
+  "schema": "migrasutra.rehearsal/v1",
+  "createdAt": "2026-11-10T20:11:25.755Z",
+  "planId": "MS-fc8df63c07cb",
+  "kind": "isolated-static-manifest-rehearsal",
+  "result": "STATIC_CHANGE_VERIFIED",
+  "source": {
+    "path": "package.json",
+    "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5"
+  },
+  "transformed": {
+    "path": "package.json",
+    "sha256": "b201eadbbae877160f12bb242b4f548ae56aeb7f939109c6329eaed00453afc9"
+  },
+  "change": {
+    "section": "dependencies",
+    "key": "small-library",
+    "from": "1.2.3",
+    "to": "2.0.0"
+  },
+  "tests": {
+    "status": "NOT_RUN",
+    "reason": "Starter intentionally never runs package installs, builds, tests or migration scripts"
+  },
+  "externalEffects": {
+    "network": false,
+    "sourceRepositoryWritten": false,
+    "shellExecution": false
+  },
+  "rollback": {
+    "status": "DOCUMENTED_NOT_TESTED",
+    "action": "Restore original package.json and associated lockfile from verified source-control reference; validate separately"
+  }
+}

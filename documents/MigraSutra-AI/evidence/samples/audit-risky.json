@@ -1,0 +1,316 @@
+{
+  "schema": "migrasutra.audit/v1",
+  "toolVersion": "0.2.0",
+  "createdAt": "2026-11-10T20:11:25.875Z",
+  "scan": {
+    "schema": "migrasutra.scan/v1",
+    "createdAt": "2026-11-10T20:11:25.875Z",
+    "mode": "offline-static-read-only",
+    "scope": {
+      "root": ".",
+      "filesRead": 4,
+      "filesConsidered": 4
+    },
+    "sourceFiles": [
+      {
+        "path": "Dockerfile",
+        "sha256": "8d144fb487a5abf79ec7a5556731fd265136fbd845bbaa2296d87729ada4e509",
+        "bytes": 39
+      },
+      {
+        "path": "migrations/001_unsafe.sql",
+        "sha256": "815c5fc1fc4f40264c533bf94c7d5ae483f55429eef7d555b1247a45458bcf95",
+        "bytes": 177
+      },
+      {
+        "path": "package.json",
+        "sha256": "ba30b2d8fd941c64dcea0169a1fd1f517fa797ecc7083f5031e0c3b7dc0bceb9",
+        "bytes": 126
+      },
+      {
+        "path": "requirements.txt",
+        "sha256": "cecfc7f249eb94f332922e168da67c908b0afd3235c53fa2bdfafe233d1af47d",
+        "bytes": 23
+      }
+    ],
+    "inventory": [
+      {
+        "ecosystem": "containers",
+        "file": "Dockerfile",
+        "counts": {
+          "dockerfiles": 1
+        }
+      },
+      {
+        "ecosystem": "sql",
+        "file": "migrations/001_unsafe.sql",
+        "counts": {
+          "lines": 6
+        }
+      },
+      {
+        "ecosystem": "npm",
+        "file": "package.json",
+        "counts": {
+          "dependencies": 2,
+          "devDependencies": 0,
+          "optionalDependencies": 0,
+          "peerDependencies": 0
+        }
+      },
+      {
+        "ecosystem": "python",
+        "file": "requirements.txt",
+        "counts": {
+          "requirements": 2
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "MS-a63ace9671fc",
+        "code": "DOCKER_UNPINNED_BASE",
+        "severity": "medium",
+        "file": "Dockerfile",
+        "line": 1,
+        "description": "Docker base image is not digest pinned; review repeatability",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "8d144fb487a5abf79ec7a5556731fd265136fbd845bbaa2296d87729ada4e509",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-53da2c153a38",
+        "code": "SQL_DROP_TABLE",
+        "severity": "high",
+        "file": "migrations/001_unsafe.sql",
+        "line": 2,
+        "description": "Potentially destructive DROP TABLE statement",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "815c5fc1fc4f40264c533bf94c7d5ae483f55429eef7d555b1247a45458bcf95",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-d783e3230f1b",
+        "code": "SQL_DROP_COLUMN",
+        "severity": "high",
+        "file": "migrations/001_unsafe.sql",
+        "line": 3,
+        "description": "Potentially destructive column removal",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "815c5fc1fc4f40264c533bf94c7d5ae483f55429eef7d555b1247a45458bcf95",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-b8fe4c423f13",
+        "code": "SQL_TRUNCATE",
+        "severity": "high",
+        "file": "migrations/001_unsafe.sql",
+        "line": 4,
+        "description": "Potentially destructive TRUNCATE statement",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "815c5fc1fc4f40264c533bf94c7d5ae483f55429eef7d555b1247a45458bcf95",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-6b2281bbf108",
+        "code": "SQL_DELETE_UNSCOPED",
+        "severity": "high",
+        "file": "migrations/001_unsafe.sql",
+        "line": 5,
+        "description": "DELETE statement without WHERE detected by heuristic; manual SQL review required",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "815c5fc1fc4f40264c533bf94c7d5ae483f55429eef7d555b1247a45458bcf95",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-64aeb08bf170",
+        "code": "NPM_NO_LOCKFILE",
+        "severity": "medium",
+        "file": "package.json",
+        "line": 1,
+        "description": "Dependency manifest has packages but no recognized root lockfile; reproducibility needs review",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "ba30b2d8fd941c64dcea0169a1fd1f517fa797ecc7083f5031e0c3b7dc0bceb9",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      },
+      {
+        "id": "MS-a1821bcfc924",
+        "code": "NPM_NONREPRODUCIBLE",
+        "severity": "medium",
+        "file": "package.json",
+        "line": 1,
+        "description": "Dependency source/version may be unstable or nonregistry; verify reproducibility",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "ba30b2d8fd941c64dcea0169a1fd1f517fa797ecc7083f5031e0c3b7dc0bceb9",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        },
+        "subject": "example-lib",
+        "section": "dependencies"
+      },
+      {
+        "id": "MS-5477fb6a81ef",
+        "code": "PYTHON_UNPINNED",
+        "severity": "medium",
+        "file": "requirements.txt",
+        "line": 1,
+        "description": "Python dependency is not pinned to an exact version by the basic static rule",
+        "evidence": {
+          "type": "static",
+          "sourceHash": "cecfc7f249eb94f332922e168da67c908b0afd3235c53fa2bdfafe233d1af47d",
+          "verifiedBy": "deterministic-rule",
+          "execution": "not-run"
+        }
+      }
+    ],
+    "totals": {
+      "high": 4,
+      "medium": 4,
+      "low": 0
+    },
+    "limitations": [
+      "No dependency versions were resolved online",
+      "No test commands, scripts, codemods, or database migrations were executed",
+      "Static SQL patterns are heuristics, not dialect-complete parsing",
+      "Static analysis cannot prove runtime compatibility or rollback safety"
+    ]
+  },
+  "plan": {
+    "schema": "migrasutra.plan/v1",
+    "planId": "MS-47f7577283dc",
+    "createdAt": "2026-11-10T20:11:25.876Z",
+    "mode": "proposal-only",
+    "target": {
+      "kind": "node-engine",
+      "version": "22"
+    },
+    "baseline": {
+      "path": "package.json",
+      "sha256": "ba30b2d8fd941c64dcea0169a1fd1f517fa797ecc7083f5031e0c3b7dc0bceb9"
+    },
+    "actions": [
+      {
+        "kind": "package-json-field-update",
+        "file": "package.json",
+        "section": "engines",
+        "key": "node",
+        "from": null,
+        "to": "22"
+      }
+    ],
+    "sourceScan": {
+      "schema": "migrasutra.scan/v1",
+      "sourceFiles": 4,
+      "highFindings": [
+        "MS-53da2c153a38",
+        "MS-d783e3230f1b",
+        "MS-b8fe4c423f13",
+        "MS-6b2281bbf108"
+      ]
+    },
+    "risk": {
+      "staticHighFindings": 4,
+      "prerequisites": [
+        "Check vendor-supported upgrade path and version release notes",
+        "Confirm supported runtime and dependency graph",
+        "Preserve verified source-control commit and backups",
+        "Run applicable tests in a reviewed isolated environment",
+        "Approve rollback and forward-fix playbook"
+      ]
+    },
+    "verification": [
+      "Install dependencies inside an isolated approved sandbox; not run by starter",
+      "Run unit, integration, contract, performance and migration-specific tests; not run by starter",
+      "Check compatibility and deployment/rollback with human reviewers"
+    ],
+    "rollback": {
+      "automatic": false,
+      "strategy": "Restore original manifest from version control or verified backup, then restore the lockfile and reinstall in an isolated environment; database rollback needs its own tested recovery procedure"
+    },
+    "decision": "REVIEW_REQUIRED",
+    "notes": [
+      "Version specified by user; no online release compatibility checked",
+      "Plan generation does not modify repository or execute tools"
+    ]
+  },
+  "rehearsal": {
+    "schema": "migrasutra.rehearsal/v1",
+    "createdAt": "2026-11-10T20:11:25.886Z",
+    "planId": "MS-47f7577283dc",
+    "kind": "isolated-static-manifest-rehearsal",
+    "result": "STATIC_CHANGE_VERIFIED",
+    "source": {
+      "path": "package.json",
+      "sha256": "ba30b2d8fd941c64dcea0169a1fd1f517fa797ecc7083f5031e0c3b7dc0bceb9"
+    },
+    "transformed": {
+      "path": "package.json",
+      "sha256": "c673394c949e9481a4eb81166ec76d1ebf02da45d0334ef2f088b0c1f08993e2"
+    },
+    "change": {
+      "section": "engines",
+      "key": "node",
+      "from": null,
+      "to": "22"
+    },
+    "tests": {
+      "status": "NOT_RUN",
+      "reason": "Starter intentionally never runs package installs, builds, tests or migration scripts"
+    },
+    "externalEffects": {
+      "network": false,
+      "sourceRepositoryWritten": false,
+      "shellExecution": false
+    },
+    "rollback": {
+      "status": "DOCUMENTED_NOT_TESTED",
+      "action": "Restore original package.json and associated lockfile from verified source-control reference; validate separately"
+    }
+  },
+  "gate": {
+    "schema": "migrasutra.gate/v1",
+    "createdAt": "2026-11-10T20:11:25.887Z",
+    "planId": "MS-47f7577283dc",
+    "decision": "NO_GO",
+    "observed": {
+      "staticRehearsal": "STATIC_CHANGE_VERIFIED",
+      "importedEvidence": "NONE",
+      "automaticTests": "NOT_RUN",
+      "rollbackTest": "NOT_RUN"
+    },
+    "reasons": [
+      "High-severity static findings remain; separate remediation and review needed",
+      "Required build, unit, integration and migration-specific tests have not been executed by MigraSutra",
+      "Rollback strategy has not been independently rehearsed"
+    ],
+    "humanApprovalRequired": true
+  },
+  "notes": [],
+  "summary": {
+    "verdict": "NO_GO",
+    "high": 4,
+    "medium": 4,
+    "low": 0,
+    "filesRead": 4,
+    "testsExecuted": 0
+  }
+}

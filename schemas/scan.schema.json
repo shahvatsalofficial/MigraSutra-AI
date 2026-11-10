@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MigraSutra scan V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "mode",
+    "sourceFiles",
+    "findings",
+    "totals"
+  ],
+  "properties": {
+    "schema": {
+      "const": "migrasutra.scan/v1"
+    },
+    "mode": {
+      "const": "offline-static-read-only"
+    },
+    "sourceFiles": {
+      "type": "array"
+    },
+    "findings": {
+      "type": "array"
+    },
+    "totals": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

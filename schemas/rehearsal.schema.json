@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MigraSutra rehearsal V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "planId",
+    "result",
+    "tests"
+  ],
+  "properties": {
+    "schema": {
+      "const": "migrasutra.rehearsal/v1"
+    },
+    "planId": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "tests": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

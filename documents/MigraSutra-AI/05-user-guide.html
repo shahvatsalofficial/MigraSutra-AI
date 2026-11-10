@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>User Guide · MigraSutra AI</title><meta name="description" content="MigraSutra AI documentation: evidence-first, offline, read-only migration auditing."><style>:root{--bg:#f6f8fb;--fg:#0f172a;--mut:#475569;--card:#fff;--bd:#d9e1ec;--ac:#3538cd;--code:#eef2f7}@media(prefers-color-scheme:dark){:root{--bg:#0b1220;--fg:#e6edf7;--mut:#9fb0c7;--card:#121b2e;--bd:#25324a;--ac:#a4bcfd;--code:#1a2540}}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--ac)}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);max-width:1240px;margin:0 auto}nav{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:24px 16px;border-right:1px solid var(--bd)}nav b{display:block;margin-bottom:8px}nav a{display:block;padding:4px 8px;border-radius:6px;text-decoration:none;color:var(--mut);font-size:.92rem}nav a[aria-current]{background:var(--card);color:var(--fg);font-weight:600}nav .sub a{padding-left:20px;font-size:.84rem}main{padding:32px 28px 80px;min-width:0}h1{font-size:2rem;line-height:1.2}h2{margin-top:2.2em;border-bottom:1px solid var(--bd);padding-bottom:.25em}h3{margin-top:1.6em}code{background:var(--code);padding:.1em .35em;border-radius:5px;font:.88em ui-monospace,Consolas,monospace}pre{background:var(--code);padding:14px;border-radius:10px;overflow:auto}pre code{background:none;padding:0}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--card);font-size:.92rem}th,td{border:1px solid var(--bd);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--code)}blockquote{margin:1em 0;padding:8px 16px;border-left:4px solid var(--ac);background:var(--card);border-radius:0 8px 8px 0}footer{color:var(--mut);font-size:.85rem;margin-top:48px}:focus-visible{outline:3px solid var(--ac);outline-offset:2px}.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--card);padding:6px}@media(max-width:820px){.layout{display:block}nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--bd)}main{padding:20px 16px 60px}}@media print{nav{display:none}.layout{display:block}}</style></head><body><a class="skip" href="#content">Skip to content</a><div class="layout"><nav aria-label="Documentation"><b>MigraSutra AI</b><a href="README.html">MigraSutra AI Documentation</a><a href="01-executive-summary.html">Executive Summary</a><a href="02-functional-spec.html">Functional Specification</a><a href="03-technical-spec.html">Technical Specification</a><a href="04-architecture.html">Architecture</a><a href="05-user-guide.html" aria-current="page">User Guide</a><div class="sub"><a href="#install">Install</a><a href="#five-minute-tour">Five-minute tour</a><a href="#reading-a-report">Reading a report</a><a href="#use-in-ci">Use in CI</a><a href="#track-progress-between-runs">Track progress between runs</a><a href="#ai-ide-skills">AI IDE skills</a><a href="#local-report-server">Local report server</a><a href="#troubleshooting">Troubleshooting</a></div><a href="06-security-privacy-legal.html">Security, Privacy and Legal</a><a href="07-independent-audit.html">Independent Audit and Evidence</a><a href="test-results.html">Test results (observed)</a><p><a href="https://github.com/shahvatsalofficial/MigraSutra-AI">GitHub</a> · <a href="https://www.npmjs.com/package/migrasutra">npm</a></p></nav><main id="content"><h1 id="user-guide">User Guide</h1>
+<h2 id="install">Install</h2>
+<p>Requires Node.js 22 or newer.</p>
+<pre><code>npx migrasutra@latest doctor</code></pre>
+<p>Or from source:</p>
+<pre><code>git clone https://github.com/shahvatsalofficial/MigraSutra-AI.git
+cd MigraSutra-AI
+npm test
+npm run demo</code></pre>
+<p>If <code>npx migrasutra</code> returns 404, the npm release has not been published yet. Use the source install.</p>
+<h2 id="five-minute-tour">Five-minute tour</h2>
+<p>Audit the bundled risky fixture and open the report:</p>
+<pre><code>node packages/cli/index.mjs audit --root fixtures/risky-app --target node:22 --out artifacts/audit</code></pre>
+<p>Open <code>artifacts/audit/audit.html</code> in a browser. Expected verdict: <code>NO_GO</code> with 4 high and 4 medium findings.</p>
+<p>Audit your own project:</p>
+<pre><code>npx migrasutra audit --root . --out migrasutra-report --target npm:express@5.0.0</code></pre>
+<p>The <code>--target</code> package must already be declared in your <code>package.json</code>. MigraSutra never adds dependencies.</p>
+<h2 id="reading-a-report">Reading a report</h2>
+<ol><li><strong>Verdict.</strong> <code>NO_GO</code> means fix the high findings first. <code>REVIEW_REQUIRED</code> means a person must review; it does not mean safe.</li><li><strong>Findings table.</strong> Sorted high to low. The evidence ID is stable, so you can track a finding across runs.</li><li><strong>Plan and rehearsal.</strong> Shows the exact field change and that tests were <code>NOT_RUN</code>.</li><li><strong>Not performed.</strong> Lists what the static tool cannot know.</li></ol>
+<h2 id="use-in-ci">Use in CI</h2>
+<pre><code>- run: npx migrasutra audit --root . --out migrasutra-report --fail high
+- uses: actions/upload-artifact@v4
+  if: always()
+  with: { name: migrasutra-report, path: migrasutra-report }</code></pre>
+<p><code>--fail high</code> exits 1 when any high finding exists.</p>
+<h2 id="track-progress-between-runs">Track progress between runs</h2>
+<pre><code>npx migrasutra scan --root . --out before.json
+# fix issues
+npx migrasutra scan --root . --out after.json
+npx migrasutra compare --before before.json --after after.json --out diff.json</code></pre>
+<p><code>REGRESSION</code> means a new high finding appeared.</p>
+<h2 id="ai-ide-skills">AI IDE skills</h2>
+<pre><code>npx migrasutra skills --host claude --root .</code></pre>
+<p>Hosts: <code>claude</code>, <code>cursor</code>, <code>codex</code>, <code>gemini</code>, <code>copilot</code>, <code>generic</code>. Files are copied into the host's skill folder. The command refuses to overwrite and refuses symlinked targets. Whether the IDE then discovers and runs a skill depends on the IDE version and has not been verified here.</p>
+<h2 id="local-report-server">Local report server</h2>
+<pre><code>MIGRASUTRA_SERVER_TOKEN=use-a-long-random-value npx migrasutra serve --report artifacts/audit/audit.json --port 8787</code></pre>
+<p>Then call <code>GET http://127.0.0.1:8787/report</code> with <code>Authorization: Bearer &lt;token&gt;</code>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="tw"><table><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td><code>Scan is stale</code></td><td><code>package.json</code> changed after the scan</td><td>Run scan again</td></tr><tr><td><code>Target package is not declared</code></td><td>Package missing from <code>package.json</code></td><td>Declare it first</td></tr><tr><td><code>SOURCE_NOT_READ</code> finding</td><td>Symlink or file over 1 MiB</td><td>Replace with a regular file</td></tr><tr><td>Symlink tests skipped on Windows</td><td>No symlink privilege</td><td>Enable Developer Mode; not required for normal use</td></tr><tr><td><code>Missing value for --out</code></td><td>Option without value</td><td>Pass a path</td></tr></tbody></table></div><footer>Apache-2.0 · Created by Vatsal Shah · Generated from <code>05-user-guide.md</code>. Static analysis only; this documentation makes no deploy-safety guarantee.</footer></main></div></body></html>

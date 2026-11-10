@@ -1,0 +1,9 @@
+{
+  "name": "migrasutra",
+  "version": "0.1.0",
+  "description": "Migration intelligence agent skills, offline audits and evidence-first workflows",
+  "author": {
+    "name": "Vatsal Shah"
+  },
+  "license": "Apache-2.0"
+}

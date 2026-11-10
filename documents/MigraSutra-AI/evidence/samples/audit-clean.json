@@ -1,0 +1,165 @@
+{
+  "schema": "migrasutra.audit/v1",
+  "toolVersion": "0.2.0",
+  "createdAt": "2026-11-10T20:11:25.902Z",
+  "scan": {
+    "schema": "migrasutra.scan/v1",
+    "createdAt": "2026-11-10T20:11:25.902Z",
+    "mode": "offline-static-read-only",
+    "scope": {
+      "root": ".",
+      "filesRead": 2,
+      "filesConsidered": 2
+    },
+    "sourceFiles": [
+      {
+        "path": "package-lock.json",
+        "sha256": "7b6b5037fa4392ef1a3f7e405094f8aa036d5ebba838b44a67b83ffa02397c8b",
+        "bytes": 84
+      },
+      {
+        "path": "package.json",
+        "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5",
+        "bytes": 155
+      }
+    ],
+    "inventory": [
+      {
+        "ecosystem": "npm",
+        "file": "package.json",
+        "counts": {
+          "dependencies": 1,
+          "devDependencies": 0,
+          "optionalDependencies": 0,
+          "peerDependencies": 0
+        }
+      }
+    ],
+    "findings": [],
+    "totals": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "limitations": [
+      "No dependency versions were resolved online",
+      "No test commands, scripts, codemods, or database migrations were executed",
+      "Static SQL patterns are heuristics, not dialect-complete parsing",
+      "Static analysis cannot prove runtime compatibility or rollback safety"
+    ]
+  },
+  "plan": {
+    "schema": "migrasutra.plan/v1",
+    "planId": "MS-fc8df63c07cb",
+    "createdAt": "2026-11-10T20:11:25.903Z",
+    "mode": "proposal-only",
+    "target": {
+      "kind": "npm",
+      "name": "small-library",
+      "version": "2.0.0"
+    },
+    "baseline": {
+      "path": "package.json",
+      "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5"
+    },
+    "actions": [
+      {
+        "kind": "package-json-field-update",
+        "file": "package.json",
+        "section": "dependencies",
+        "key": "small-library",
+        "from": "1.2.3",
+        "to": "2.0.0"
+      }
+    ],
+    "sourceScan": {
+      "schema": "migrasutra.scan/v1",
+      "sourceFiles": 2,
+      "highFindings": []
+    },
+    "risk": {
+      "staticHighFindings": 0,
+      "prerequisites": [
+        "Check vendor-supported upgrade path and version release notes",
+        "Confirm supported runtime and dependency graph",
+        "Preserve verified source-control commit and backups",
+        "Run applicable tests in a reviewed isolated environment",
+        "Approve rollback and forward-fix playbook"
+      ]
+    },
+    "verification": [
+      "Install dependencies inside an isolated approved sandbox; not run by starter",
+      "Run unit, integration, contract, performance and migration-specific tests; not run by starter",
+      "Check compatibility and deployment/rollback with human reviewers"
+    ],
+    "rollback": {
+      "automatic": false,
+      "strategy": "Restore original manifest from version control or verified backup, then restore the lockfile and reinstall in an isolated environment; database rollback needs its own tested recovery procedure"
+    },
+    "decision": "REVIEW_REQUIRED",
+    "notes": [
+      "Version specified by user; no online release compatibility checked",
+      "Plan generation does not modify repository or execute tools"
+    ]
+  },
+  "rehearsal": {
+    "schema": "migrasutra.rehearsal/v1",
+    "createdAt": "2026-11-10T20:11:25.913Z",
+    "planId": "MS-fc8df63c07cb",
+    "kind": "isolated-static-manifest-rehearsal",
+    "result": "STATIC_CHANGE_VERIFIED",
+    "source": {
+      "path": "package.json",
+      "sha256": "c49a36ad6b7aa69d2e6ae4cc2909ffe477ded0ea7251c40fc234403c0151dfc5"
+    },
+    "transformed": {
+      "path": "package.json",
+      "sha256": "b201eadbbae877160f12bb242b4f548ae56aeb7f939109c6329eaed00453afc9"
+    },
+    "change": {
+      "section": "dependencies",
+      "key": "small-library",
+      "from": "1.2.3",
+      "to": "2.0.0"
+    },
+    "tests": {
+      "status": "NOT_RUN",
+      "reason": "Starter intentionally never runs package installs, builds, tests or migration scripts"
+    },
+    "externalEffects": {
+      "network": false,
+      "sourceRepositoryWritten": false,
+      "shellExecution": false
+    },
+    "rollback": {
+      "status": "DOCUMENTED_NOT_TESTED",
+      "action": "Restore original package.json and associated lockfile from verified source-control reference; validate separately"
+    }
+  },
+  "gate": {
+    "schema": "migrasutra.gate/v1",
+    "createdAt": "2026-11-10T20:11:25.913Z",
+    "planId": "MS-fc8df63c07cb",
+    "decision": "REVIEW_REQUIRED",
+    "observed": {
+      "staticRehearsal": "STATIC_CHANGE_VERIFIED",
+      "importedEvidence": "NONE",
+      "automaticTests": "NOT_RUN",
+      "rollbackTest": "NOT_RUN"
+    },
+    "reasons": [
+      "Required build, unit, integration and migration-specific tests have not been executed by MigraSutra",
+      "Rollback strategy has not been independently rehearsed"
+    ],
+    "humanApprovalRequired": true
+  },
+  "notes": [],
+  "summary": {
+    "verdict": "REVIEW_REQUIRED",
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "filesRead": 2,
+    "testsExecuted": 0
+  }
+}

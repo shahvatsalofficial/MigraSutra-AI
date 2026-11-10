@@ -1,0 +1,46 @@
+{
+  "schema": "migrasutra.rules/v1",
+  "rules": [
+    {
+      "id": "SQL_DROP_TABLE",
+      "risk": "high",
+      "source": "migrations/**/*.sql",
+      "manualReview": true
+    },
+    {
+      "id": "SQL_DROP_COLUMN",
+      "risk": "high",
+      "manualReview": true
+    },
+    {
+      "id": "SQL_TRUNCATE",
+      "risk": "high",
+      "manualReview": true
+    },
+    {
+      "id": "SQL_DELETE_UNSCOPED",
+      "risk": "high",
+      "manualReview": true
+    },
+    {
+      "id": "NPM_NONREPRODUCIBLE",
+      "risk": "medium",
+      "manualReview": true
+    },
+    {
+      "id": "NPM_NO_LOCKFILE",
+      "risk": "medium",
+      "manualReview": true
+    },
+    {
+      "id": "PYTHON_UNPINNED",
+      "risk": "medium",
+      "manualReview": true
+    },
+    {
+      "id": "DOCKER_UNPINNED_BASE",
+      "risk": "medium",
+      "manualReview": true
+    }
+  ]
+}

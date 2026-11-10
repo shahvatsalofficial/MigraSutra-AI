@@ -1,0 +1,33 @@
+{
+  "schema": "migrasutra.workflow/v1",
+  "name": "data-schema-expansion",
+  "steps": [
+    {
+      "step": 1,
+      "action": "approve scoped nonproduction environment",
+      "approvalRequired": false
+    },
+    {
+      "step": 2,
+      "action": "verify data backup restoration",
+      "approvalRequired": false
+    },
+    {
+      "step": 3,
+      "action": "introduce backward-compatible schema fields",
+      "approvalRequired": true
+    },
+    {
+      "step": 4,
+      "action": "validate dual-write/read and data integrity",
+      "approvalRequired": true
+    },
+    {
+      "step": 5,
+      "action": "execute controlled contract phase after compatibility proof",
+      "approvalRequired": true
+    }
+  ],
+  "defaultPermissions": "read-only",
+  "execution": "planned"
+}

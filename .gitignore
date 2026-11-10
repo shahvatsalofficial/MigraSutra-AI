@@ -1,0 +1,11 @@
+node_modules/
+coverage/
+dist/
+.env
+.env.*
+!.env.example
+.migrasutra/
+artifacts/
+*.log
+*.tgz
+.DS_Store

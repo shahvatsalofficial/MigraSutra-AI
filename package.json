@@ -1,0 +1,81 @@
+{
+  "name": "migrasutra",
+  "version": "0.2.0",
+  "description": "Evidence-first migration intelligence CLI and 20 portable agent skills. Offline, deterministic, read-only audits of npm, Python, Docker and SQL migrations with MD/HTML/JSON reports.",
+  "type": "module",
+  "bin": {
+    "migrasutra": "packages/cli/index.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "audit": "node packages/cli/index.mjs audit --root fixtures/risky-app --target node:22 --out artifacts/audit",
+    "build:docs": "node scripts/build-docs.mjs",
+    "check:docs": "node scripts/build-docs.mjs --check",
+    "test:report": "node scripts/test-report.mjs",
+    "help": "node packages/cli/index.mjs help"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "Apache-2.0",
+  "author": "Vatsal Shah <https://github.com/shahvatsalofficial>",
+  "keywords": [
+    "migration",
+    "upgrade",
+    "dependency-upgrade",
+    "database-migration",
+    "sql-migration",
+    "release-gate",
+    "audit",
+    "evidence",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "codex",
+    "ai-agents",
+    "offline",
+    "security",
+    "rollback",
+    "dependency-audit"
+  ],
+  "main": "packages/core/index.mjs",
+  "exports": {
+    ".": "./packages/core/index.mjs",
+    "./cli": "./packages/cli/index.mjs"
+  },
+  "files": [
+    "packages",
+    "skills",
+    "agents",
+    "schemas",
+    "rules",
+    "policies",
+    "workflows",
+    "adapters",
+    "integrations",
+    ".claude-plugin",
+    "docs",
+    "documents/MigraSutra-AI",
+    "examples",
+    "llms.txt",
+    "NOTICE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvatsalofficial/MigraSutra-AI.git"
+  },
+  "homepage": "https://github.com/shahvatsalofficial/MigraSutra-AI#readme",
+  "bugs": {
+    "url": "https://github.com/shahvatsalofficial/MigraSutra-AI/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

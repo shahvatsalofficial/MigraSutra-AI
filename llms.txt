@@ -1,0 +1,27 @@
+# MigraSutra AI
+
+> Offline, deterministic, read-only migration audit CLI plus 20 portable agent skills (Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot). Scans npm, Python, Docker and SQL migrations for upgrade risk, rehearses a manifest change in a temp directory, and writes JSON, Markdown and HTML reports with a conservative release verdict. Zero runtime dependencies, Apache-2.0, created by Vatsal Shah.
+
+It never runs your tests, installs, scripts or migrations, so test status is always NOT_RUN and the best verdict is REVIEW_REQUIRED. SQL checks are heuristics.
+
+## Docs
+- [README](README.md): overview, quick start, proof, limits
+- [Documentation index](documents/MigraSutra-AI/README.md)
+- [Executive summary](documents/MigraSutra-AI/01-executive-summary.md)
+- [Functional specification](documents/MigraSutra-AI/02-functional-spec.md): commands, rules, verdicts
+- [Technical specification](documents/MigraSutra-AI/03-technical-spec.md)
+- [Architecture](documents/MigraSutra-AI/04-architecture.md)
+- [User guide](documents/MigraSutra-AI/05-user-guide.md)
+- [Security, privacy and legal](documents/MigraSutra-AI/06-security-privacy-legal.md)
+- [Independent audit and evidence](documents/MigraSutra-AI/07-independent-audit.md)
+- [Observed test results](documents/MigraSutra-AI/test-results.md)
+
+## Quick start
+- `npx migrasutra audit --root . --out report --target node:22`
+- Output: report/audit.json, report/audit.md, report/audit.html
+- Requires Node.js 22 or newer.
+
+## Optional
+- [Agent catalog](docs/AGENT_CATALOG.md)
+- [Evidence contract](docs/EVIDENCE_CONTRACT.md)
+- [Changelog](CHANGELOG.md)
