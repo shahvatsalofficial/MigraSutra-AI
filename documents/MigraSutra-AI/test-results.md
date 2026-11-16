@@ -4,9 +4,9 @@ Command: `node --test tests/*.test.mjs`
 
 | Total | Pass | Fail | Skipped | Exit code |
 | --- | --- | --- | --- | --- |
-| 99 | 96 | 0 | 3 | 0 |
+| 100 | 97 | 0 | 3 | 0 |
 
-Environment: Node v24.15.0, win32/x64, commit `uncommitted`.
+Environment: Node v24.15.0, win32/x64, commit `d996dae`.
 
 Skips: Symlink tests skip when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.
 
@@ -35,6 +35,7 @@ Regenerate with `npm run test:report`. This file is machine-written from the rea
 - PASS — audit CLI writes json, md and html
 - PASS — audit --fail high exits 1 on high findings
 - PASS — audit requires --out
+- PASS — version, package.json and CITATION.cff agree
 - PASS — scan identifies correct schema
 - PASS — clean fixture produces no warnings
 - PASS — risky fixture produces high findings

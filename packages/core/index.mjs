@@ -264,7 +264,7 @@ export function compareScans(before,after){
   return {schema:'migrasutra.compare/v1',createdAt:new Date().toISOString(),introduced:after.findings.filter(x=>!a.has(x.id)),resolved:before.findings.filter(x=>!b.has(x.id)),unchanged:after.findings.filter(x=>a.has(x.id)),decision:after.findings.some(x=>x.severity==='high'&&!a.has(x.id))?'REGRESSION':'REVIEW'};
 }
 export const SCHEMA_AUDIT='migrasutra.audit/v1';
-export const TOOL_VERSION='0.2.0';
+export const TOOL_VERSION=JSON.parse(fs.readFileSync(new URL('../../package.json',import.meta.url),'utf8')).version;
 const SEV_ORDER={high:0,medium:1,low:2};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mdCell=s=>String(s??'').replace(/[|\r\n]/g,' ').replace(/`/g,"'");

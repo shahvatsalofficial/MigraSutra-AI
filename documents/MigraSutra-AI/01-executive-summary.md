@@ -38,4 +38,4 @@ Upgrades fail when teams cannot say what is changing, what could break, what was
 
 ## Maturity
 
-Version 0.2.0 is an early release. Static scanning, planning, static rehearsal, gating, comparison and reporting are implemented and tested. See the [audit](07-independent-audit.md) for the measured results and the open limits.
+Version 0.2.1 is an early release. Static scanning, planning, static rehearsal, gating, comparison and reporting are implemented and tested. See the [audit](07-independent-audit.md) for the measured results and the open limits.

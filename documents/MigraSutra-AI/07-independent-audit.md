@@ -6,7 +6,7 @@ This is a **self-audit prepared with an AI coding assistant** during the 0.2.0 r
 
 ## Scope
 
-Version 0.2.0: `packages/core`, `packages/cli`, `packages/server`, fixtures, tests, CI and packaging. Skills and agent prompts were checked for structure, not for model behavior.
+Version 0.2.1: `packages/core`, `packages/cli`, `packages/server`, fixtures, tests, CI and packaging. Skills and agent prompts were checked for structure, not for model behavior.
 
 ## Reproduce everything
 

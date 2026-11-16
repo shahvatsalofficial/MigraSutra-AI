@@ -2,16 +2,16 @@
   "schema": "migrasutra.test-evidence/v1",
   "command": "node --test tests/*.test.mjs",
   "exitCode": 0,
-  "total": 99,
-  "pass": 96,
+  "total": 100,
+  "pass": 97,
   "fail": 0,
   "skipped": 3,
-  "durationMs": 36800,
+  "durationMs": 31436,
   "environment": {
     "node": "v24.15.0",
     "platform": "win32",
     "arch": "x64",
-    "commit": "uncommitted"
+    "commit": "d996dae"
   },
   "skippedReason": "Symlink tests skip when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.",
   "cases": [
@@ -97,6 +97,10 @@
     },
     {
       "name": "audit requires --out",
+      "status": "pass"
+    },
+    {
+      "name": "version, package.json and CITATION.cff agree",
       "status": "pass"
     },
     {

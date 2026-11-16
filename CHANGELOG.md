@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-11-16
+
+- Version now has a single source (`package.json`); `TOOL_VERSION` reads it, so reports and `doctor` cannot drift.
+- CI and release workflows updated to `actions/checkout@v7`, `setup-node@v7`, `upload-artifact@v7` (Node 20 action runtime deprecation).
+- Test asserts CITATION.cff and package version stay in sync.
+
 ## 0.2.0 — 2026-11-11
 
 - Added `audit` command: scan, plan, static rehearsal and gate in one step, written as `audit.json`, `audit.md` and `audit.html`.

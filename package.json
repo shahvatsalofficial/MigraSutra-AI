@@ -1,6 +1,6 @@
 {
   "name": "migrasutra",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Evidence-first migration intelligence CLI and 20 portable agent skills. Offline, deterministic, read-only audits of npm, Python, Docker and SQL migrations with MD/HTML/JSON reports.",
   "type": "module",
   "bin": {

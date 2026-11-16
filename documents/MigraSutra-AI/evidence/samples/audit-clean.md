@@ -1,6 +1,6 @@
 # MigraSutra Audit Report
 
-Generated: 2026-11-10T20:11:25.902Z · tool 0.2.0 · mode: offline, static, read-only
+Generated: 2026-11-16T17:40:28.014Z · tool 0.2.1 · mode: offline, static, read-only
 
 ## Verdict: `REVIEW_REQUIRED`
 
