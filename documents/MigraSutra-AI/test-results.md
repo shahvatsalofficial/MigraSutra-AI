@@ -6,7 +6,7 @@ Command: `node --test tests/*.test.mjs`
 | --- | --- | --- | --- | --- |
 | 100 | 97 | 0 | 3 | 0 |
 
-Environment: Node v24.15.0, win32/x64, commit `d996dae`.
+Environment: Node v24.15.0, win32/x64, commit `7971ecd`.
 
 Skips: Symlink tests skip when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.
 

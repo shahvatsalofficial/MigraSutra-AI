@@ -1,6 +1,6 @@
 # MigraSutra — migrasutra.scan/v1
 
-Generated: 2026-11-16T17:40:27.950Z
+Generated: 2026-11-25T19:31:51.242Z
 
 **Mode:** static only · no migration scripts executed
 

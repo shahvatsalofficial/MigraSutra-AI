@@ -2,6 +2,8 @@
 
 ## Commands
 
+<!-- diagram:pipeline -->
+
 | Command | Purpose | Writes |
 | --- | --- | --- |
 | `doctor` | Print version, platform, implemented and planned features | stdout |
@@ -26,6 +28,8 @@ Only these root files are read: `package.json`, lockfiles, `requirements.txt`, `
 
 ## Rule catalogue
 
+<!-- bars:rules -->
+
 | Rule ID | Severity | Meaning |
 | --- | --- | --- |
 | `SQL_DROP_TABLE` | high | Destructive table drop |
@@ -45,6 +49,10 @@ Only these root files are read: `package.json`, lockfiles, `requirements.txt`, `
 Comments and single-quoted strings are blanked before matching.
 
 ## Verdicts
+
+<!-- html:verdicts -->
+
+<!-- diagram:verdict -->
 
 | Verdict | When |
 | --- | --- |

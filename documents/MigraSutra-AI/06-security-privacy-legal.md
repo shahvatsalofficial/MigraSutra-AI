@@ -19,6 +19,8 @@ This is engineering documentation, not legal advice. Have counsel review before 
 
 ## Privacy
 
+<!-- html:trust -->
+
 - No network access, telemetry, analytics or accounts.
 - `.env` and unlisted files are never read.
 - Reports contain relative paths, rule IDs, hashes and short descriptions, not file contents.

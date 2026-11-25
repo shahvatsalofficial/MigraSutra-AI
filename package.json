@@ -13,6 +13,7 @@
     "audit": "node packages/cli/index.mjs audit --root fixtures/risky-app --target node:22 --out artifacts/audit",
     "build:docs": "node scripts/build-docs.mjs",
     "check:docs": "node scripts/build-docs.mjs --check",
+    "serve:docs": "node scripts/serve-docs.mjs",
     "test:report": "node scripts/test-report.mjs",
     "help": "node packages/cli/index.mjs help"
   },

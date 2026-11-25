@@ -1,6 +1,6 @@
 # MigraSutra Audit Report
 
-Generated: 2026-11-16T17:40:27.992Z · tool 0.2.1 · mode: offline, static, read-only
+Generated: 2026-11-25T19:31:51.320Z · tool 0.2.1 · mode: offline, static, read-only
 
 ## Verdict: `NO_GO`
 

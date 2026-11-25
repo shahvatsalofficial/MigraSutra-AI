@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shahvatsalofficial.github.io/MigraSutra-AI/sitemap.xml

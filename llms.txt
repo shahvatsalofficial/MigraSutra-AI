@@ -7,6 +7,9 @@ It never runs your tests, installs, scripts or migrations, so test status is alw
 ## Docs
 - [README](README.md): overview, quick start, proof, limits
 - [Documentation index](documents/MigraSutra-AI/README.md)
+- [Real-world scenarios](documents/MigraSutra-AI/08-real-world-scenarios.md): seven situations with real output
+- [How it works](documents/MigraSutra-AI/09-how-it-works.md)
+- [FAQ and glossary](documents/MigraSutra-AI/10-faq-and-glossary.md)
 - [Executive summary](documents/MigraSutra-AI/01-executive-summary.md)
 - [Functional specification](documents/MigraSutra-AI/02-functional-spec.md): commands, rules, verdicts
 - [Technical specification](documents/MigraSutra-AI/03-technical-spec.md)

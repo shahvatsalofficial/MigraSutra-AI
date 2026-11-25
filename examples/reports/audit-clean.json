@@ -1,10 +1,10 @@
 {
   "schema": "migrasutra.audit/v1",
   "toolVersion": "0.2.1",
-  "createdAt": "2026-11-16T17:40:28.014Z",
+  "createdAt": "2026-11-25T19:31:51.380Z",
   "scan": {
     "schema": "migrasutra.scan/v1",
-    "createdAt": "2026-11-16T17:40:28.014Z",
+    "createdAt": "2026-11-25T19:31:51.380Z",
     "mode": "offline-static-read-only",
     "scope": {
       "root": ".",
@@ -51,7 +51,7 @@
   "plan": {
     "schema": "migrasutra.plan/v1",
     "planId": "MS-fc8df63c07cb",
-    "createdAt": "2026-11-16T17:40:28.015Z",
+    "createdAt": "2026-11-25T19:31:51.381Z",
     "mode": "proposal-only",
     "target": {
       "kind": "npm",
@@ -104,7 +104,7 @@
   },
   "rehearsal": {
     "schema": "migrasutra.rehearsal/v1",
-    "createdAt": "2026-11-16T17:40:28.031Z",
+    "createdAt": "2026-11-25T19:31:51.393Z",
     "planId": "MS-fc8df63c07cb",
     "kind": "isolated-static-manifest-rehearsal",
     "result": "STATIC_CHANGE_VERIFIED",
@@ -138,7 +138,7 @@
   },
   "gate": {
     "schema": "migrasutra.gate/v1",
-    "createdAt": "2026-11-16T17:40:28.031Z",
+    "createdAt": "2026-11-25T19:31:51.393Z",
     "planId": "MS-fc8df63c07cb",
     "decision": "REVIEW_REQUIRED",
     "observed": {

@@ -4,10 +4,15 @@ MigraSutra AI is an offline, deterministic, read-only CLI plus 20 portable agent
 
 Tagline: **Upgrade with Evidence. Rehearse Before Change. Recover with Confidence.**
 
+<!-- diagram:pipeline -->
+
 ## Read in this order
 
 | Audience | Document | What you get |
 | --- | --- | --- |
+| Anyone new | [Real-world scenarios](08-real-world-scenarios.md) | Seven situations with real output and fixes |
+| Anyone new | [How it works](09-how-it-works.md) | The whole flow in pictures |
+| Anyone | [FAQ and glossary](10-faq-and-glossary.md) | Short answers and plain-language terms |
 | Executives, buyers | [Executive summary](01-executive-summary.md) | Problem, value, honest scope, risk |
 | Product, QA | [Functional specification](02-functional-spec.md) | Commands, rules, inputs, outputs, verdicts |
 | Engineers | [Technical specification](03-technical-spec.md) | Modules, schemas, algorithms, limits |
@@ -28,4 +33,4 @@ Tagline: **Upgrade with Evidence. Rehearse Before Change. Recover with Confidenc
 - The best verdict it can issue is `REVIEW_REQUIRED`. It never says "safe to deploy".
 - Its SQL checks are heuristics. They miss dynamic SQL inside dollar-quoted bodies.
 
-The HTML pages in this folder are generated from the Markdown files by `npm run build:docs`. CI fails if they are stale.
+The HTML pages in this folder are generated from the Markdown files by `npm run build:docs`. CI fails if they are stale. The live site is at [shahvatsalofficial.github.io/MigraSutra-AI](https://shahvatsalofficial.github.io/MigraSutra-AI/).

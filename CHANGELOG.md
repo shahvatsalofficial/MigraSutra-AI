@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Rebuilt the documentation website: landing page, diagrams, charts, seven scenarios with real CLI output, light default with dark toggle, mobile layout.
+- Added How it works and FAQ pages.
+- HTML audit reports now always use the light theme.
+
 ## 0.2.1 — 2026-11-16
 
 - Version now has a single source (`package.json`); `TOOL_VERSION` reads it, so reports and `doctor` cannot drift.

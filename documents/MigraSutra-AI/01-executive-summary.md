@@ -6,6 +6,8 @@ Upgrades fail when teams cannot say what is changing, what could break, what was
 
 ## What MigraSutra AI does
 
+<!-- diagram:pipeline -->
+
 - Scans a repository read-only and lists migration risks with file, line, rule ID and a content hash.
 - Builds a reviewable plan for one supported change: an npm dependency version or the Node engine.
 - Rehearses that change on a copy in a temp directory and proves the source tree is untouched.
@@ -21,6 +23,10 @@ Upgrades fail when teams cannot say what is changing, what could break, what was
 | No code execution | The core never spawns a process. Only the test harness does. |
 | Honest status | `NOT_RUN`, `UNVERIFIED_EXTERNAL` and `DOCUMENTED_NOT_TESTED` are first-class values. |
 | Tamper checks | A stale scan, changed baseline or edited plan action is refused. |
+
+## What it covers today
+
+<!-- html:coverage -->
 
 ## What it does not do
 

@@ -31,9 +31,13 @@ Each finding records `sourceHash` (SHA-256 of the file), `verifiedBy: determinis
 
 **SQL.** Blank block comments, line comments and single-quoted strings while keeping newlines, so line numbers stay correct. Run regular expressions over the result. `DELETE FROM` is checked per `;`-separated statement for a `WHERE`.
 
+<!-- diagram:sqlscan -->
+
 **Plan.** Requires a scan whose `package.json` hash equals the current file. Finds the dependency section, refuses credential-bearing values, records `from` and `to`.
 
 **Rehearse.** Re-checks the baseline hash, validates the action against the target, applies the edit in memory, writes it to a `0600` temp file, reads it back, deletes the temp directory, and reports both hashes.
+
+<!-- diagram:rehearse -->
 
 **Gate.** Counts static high findings and rehearsal status. Hard-codes `automaticTests: NOT_RUN` and `rollbackTest: NOT_RUN`.
 

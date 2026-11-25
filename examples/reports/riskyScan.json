@@ -1,6 +1,6 @@
 {
   "schema": "migrasutra.scan/v1",
-  "createdAt": "2026-11-16T17:40:27.950Z",
+  "createdAt": "2026-11-25T19:31:51.242Z",
   "mode": "offline-static-read-only",
   "scope": {
     "root": ".",

@@ -2,17 +2,11 @@
 
 ## Context
 
-```text
- Developer / CI / AI IDE
-          |
-          v
-   migrasutra CLI  ----->  core (pure functions)  ----->  Reports: JSON, MD, HTML
-          |                    |
-          |                    +--> reads allow-listed files in the repo (read-only)
-          |                    +--> writes only to a temp dir during rehearsal
-          +--> skills installer --> .claude/skills, .cursor/skills, .agents/skills ...
-          +--> serve (127.0.0.1, bearer token) --> one report, GET only
-```
+The CLI calls a read-only core. The core reads allow-listed files, writes only to a temp folder during rehearsal, and returns JSON, Markdown or HTML. There is no cloud service.
+
+<!-- html:layers -->
+
+<!-- html:trust -->
 
 There is no cloud service, no telemetry and no model call in the product.
 
@@ -31,11 +25,9 @@ Core never imports the CLI or the server. Dependencies point inward.
 
 ## Lifecycle
 
-```text
-scan --> plan --> rehearse (static) --> gate --> human review
-  |                                       ^
-  +------------- audit (all in one) ------+
-```
+<!-- diagram:pipeline -->
+
+<!-- html:lifecycle -->
 
 Each hop carries hashes. The plan binds to the scan's `package.json` hash. The gate binds to the plan ID. A mismatch stops the flow.
 

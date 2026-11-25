@@ -11,6 +11,8 @@ MigraSutra AI is an **offline, deterministic, read-only migration audit CLI** wi
 
 It runs with no API key, no account, no network and no runtime dependencies. Created by [Vatsal Shah](https://github.com/shahvatsalofficial). Apache-2.0.
 
+**Documentation website:** https://shahvatsalofficial.github.io/MigraSutra-AI/ · [Real-world scenarios](https://shahvatsalofficial.github.io/MigraSutra-AI/08-real-world-scenarios.html) · [How it works](https://shahvatsalofficial.github.io/MigraSutra-AI/09-how-it-works.html)
+
 ## 60-second demo
 
 ```bash

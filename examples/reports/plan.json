@@ -1,7 +1,7 @@
 {
   "schema": "migrasutra.plan/v1",
   "planId": "MS-fc8df63c07cb",
-  "createdAt": "2026-11-16T17:40:27.953Z",
+  "createdAt": "2026-11-25T19:31:51.245Z",
   "mode": "proposal-only",
   "target": {
     "kind": "npm",

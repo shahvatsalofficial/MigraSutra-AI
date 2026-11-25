@@ -21,6 +21,8 @@ node packages/cli/index.mjs audit --root fixtures/risky-app --target node:22 --o
 
 ## Results
 
+<!-- bars:proof -->
+
 | # | Check | Method | Result |
 | --- | --- | --- | --- |
 | 1 | Unit and CLI tests | `npm test` | See [test results](test-results.md). Fail count must be 0 |

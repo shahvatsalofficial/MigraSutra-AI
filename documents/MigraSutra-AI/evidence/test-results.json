@@ -6,12 +6,12 @@
   "pass": 97,
   "fail": 0,
   "skipped": 3,
-  "durationMs": 31436,
+  "durationMs": 18001,
   "environment": {
     "node": "v24.15.0",
     "platform": "win32",
     "arch": "x64",
-    "commit": "d996dae"
+    "commit": "7971ecd"
   },
   "skippedReason": "Symlink tests skip when the host forbids symlink creation (Windows without Developer Mode); they run on Linux and macOS CI.",
   "cases": [
